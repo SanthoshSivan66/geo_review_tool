@@ -55,13 +55,13 @@ export default function RootLayout({
             </div>
           </header>
           <main className="main-content">{children}</main>
-          <footer className="py-8 mt-auto border-t border-zinc-200/50 dark:border-zinc-800/50 text-center">
-            <div className="flex items-center justify-center gap-6 text-sm text-zinc-500 dark:text-zinc-400">
-              <a href="/privacy" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Privacy Policy</a>
-              <a href="/terms" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Terms of Service</a>
-              <a href="/support" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Support & Contact</a>
+          <footer className="app-footer">
+            <div className="footer-links">
+              <a href="/privacy" className="footer-link">Privacy Policy</a>
+              <a href="/terms" className="footer-link">Terms of Service</a>
+              <a href="/support" className="footer-link">Support & Contact</a>
             </div>
-            <div className="mt-4 text-xs text-zinc-400 dark:text-zinc-500">
+            <div className="footer-copy">
               &copy; {new Date().getFullYear()} GEO Review Tool. All rights reserved.
             </div>
           </footer>
