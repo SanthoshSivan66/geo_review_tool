@@ -29,7 +29,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{
             __html: `
               !function(t,e){var o,n,p,r;e.__SV||(window.posthog=e,e._i=[],e.init=function(i,s,a){function g(t,e){var o=e.split(".");2==o.length&&(t=t[o[0]],e=o[1]),t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}}(p=t.createElement("script")).type="text/javascript",p.async=!0,p.src=s.api_host.replace(".i.posthog.com","-assets.i.posthog.com")+"/static/array.js",(r=t.getElementsByTagName("script")[0]).parentNode.insertBefore(p,r);var u=e;for(void 0!==a?u=e[a]=[]:a="posthog",u.people=u.people||[],u.toString=function(t){var e="posthog";return"posthog"!==a&&(e+="."+a),t||(e+=" (stub)"),e},u.people.toString=function(){return u.toString(1)+".people (stub)"},o="init capture register register_once register_for_session unregister unregister_for_session getFeatureFlag getFeatureFlagPayload isFeatureEnabled reloadFeatureFlags updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys getNextSurveyStep onSessionId setPersonProperties group resetGroups setPersonPropertiesForFlags resetPersonPropertiesForFlags setGroupPropertiesForFlags resetGroupPropertiesForFlags reset get_distinct_id getGroups get_session_id get_session_replay_url alias set_config startSessionRecording stopSessionRecording sessionRecordingStarted captureException loadToolbar get_property getSessionProperty createPersonProfile opt_in_capturing opt_out_capturing has_opted_in_capturing has_opted_out_capturing clear_opt_in_out_capturing debug".split(" "),n=0;n<o.length;n++)g(u,o[n]);e._i.push([i,s,a])}},window.posthog||function(){var t=window.posthog=[];return t.push=function(){t.push.apply(t,arguments)},t}();
-              posthog.init('phc_YOUR_PROJECT_API_KEY', {
+              posthog.init('phc_ydVwpHtk9TxLHNEvU2ywMhaCb2weG6NGAZ5aGr8Pq5mF', {
                   api_host:'https://us.i.posthog.com',
                   person_profiles: 'identified_only' // or 'always' to create profiles for anonymous users as well
               })
@@ -55,6 +55,16 @@ export default function RootLayout({
             </div>
           </header>
           <main className="main-content">{children}</main>
+          <footer className="py-8 mt-auto border-t border-zinc-200/50 dark:border-zinc-800/50 text-center">
+            <div className="flex items-center justify-center gap-6 text-sm text-zinc-500 dark:text-zinc-400">
+              <a href="/privacy" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Privacy Policy</a>
+              <a href="/terms" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Terms of Service</a>
+              <a href="/support" className="hover:text-zinc-900 dark:hover:text-zinc-100 transition-colors">Support & Contact</a>
+            </div>
+            <div className="mt-4 text-xs text-zinc-400 dark:text-zinc-500">
+              &copy; {new Date().getFullYear()} GEO Review Tool. All rights reserved.
+            </div>
+          </footer>
         </div>
       </body>
     </html>
